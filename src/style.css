@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@import "preline/variants.css";
+/* Preline UI */
+@source "preline/dist/*.js";
+
+/* Plugins */
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/aspect-ratio";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Defaults hover styles on all devices */
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+    cursor: pointer;
+}
+
+@custom-variant hover (&:hover);
+@custom-variant focus (&:focus);
+
+@theme {
+    --color-dark: #1d1d1f;
+    --color-gray-light: #f0f0f2;
+    --font-poppins: "Poppins", sans-serif;
+}
+
+
+
